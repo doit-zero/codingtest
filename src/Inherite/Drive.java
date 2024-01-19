@@ -1,11 +1,34 @@
 package Inherite;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Drive {
     public static void main(String[] args){
+        Man[] array = new Man[3];
+        Brave brave = new Brave();
+        Enemy enemy = new Enemy();
+        Enemy enemy1 = new Enemy();
 
+        array[0] = brave;
+        array[1] = enemy;
+        array[2] = enemy1;
 
+        System.out.println(Arrays.toString(array));
+
+        Child childObj = new Child(10);
+        Parent parent = new Parent(40);
+        // 자식 클래스에서 오버라이드한 메서드 호출
+        childObj.printValue();
+        parent.printValue();
+
+        // 부모 클래스의 value를 변경
+        parent.value = 20;
+
+        // 다시 메서드 호출
+        childObj.printValue();
+        parent.printValue();
 
 
 
