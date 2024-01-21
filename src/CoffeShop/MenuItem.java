@@ -1,19 +1,19 @@
 package CoffeShop;
 
 public class MenuItem {
-    private String name;
+    private String menuName;
     private int price;
 
-    public MenuItem(String name, int price) {
-        this.name = name;
+    public MenuItem(String menuName, int price) {
+        this.menuName = menuName;
         this.price = price;
     }
 
-    public int cost() {
+    public int getPrice(){
         return price;
     }
 
-    public String getName() {
-        return name;
+    public String getMenuName(){
+        return menuName;
     }
 }

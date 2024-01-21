@@ -1,14 +1,11 @@
 package CoffeShop;
 
 public class Coffee {
-    private String name;
+    private String coffeName;
     private int price;
-    public Coffee(MenuItem menuItem) {
-        this.name = menuItem.getName();
-        this.price = menuItem.cost();
-    }
 
-    public String getName() {
-        return name;
+    public Coffee(MenuItem menuItem){
+        coffeName = menuItem.getMenuName();
+        price = menuItem.getPrice();
     }
 }
