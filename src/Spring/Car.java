@@ -3,30 +3,20 @@ package Spring;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Car  {
+    private String name = "car";
 
     @Autowired
-    Tire tire;
-
-//    public Car() {
-//    }
-//
-//    public Car(Tire tire) {
-//        this.tire = tire;
-//    }
-//
-//    public Tire getTire() {
-//        return tire;
-//    }
-//
-//    public void setTire(Tire tire) {
-//        this.tire = tire;
-//    }
-
-    //    public Car() {
-//        tire = new KoreaTire();
-//    }
+    private Tire tire;
 
     public String getTireBrand() {
         return "장착된 타이어 = " + tire.getBrand();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
